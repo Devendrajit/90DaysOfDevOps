@@ -1,3 +1,4 @@
+<img width="2752" height="1536" alt="Gemini_Generated_Image_d2unm9d2unm9d2un" src="https://github.com/user-attachments/assets/5ef917ba-9929-4473-99d3-52acf0f6f7a8" />
 My current level - working professional
 
 Define 3 clear goals for the next 90 days
@@ -20,3 +21,5 @@ DAILY
 MONTHLY
 Saturday & Sunday - Complete notes with revisiting recorded lectures and study 
 Monday to Friday - Devops interview questions on topics covered, handson, daily blogs for tasks
+
+
