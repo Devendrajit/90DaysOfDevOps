@@ -14,12 +14,12 @@ Define 3 core DevOps skills you want to build
 Allocate a weekly time budget
 
 DAILY
-2 hour -  including tasks and blog
+2 hour -  complete the daily tasks 
 1/2 hour - interview preperation questions
 1/2 hour - python handson
 
 MONTHLY
-Saturday & Sunday - Complete notes with revisiting recorded lectures and study 
-Monday to Friday - Devops interview questions on topics covered, handson, daily blogs for tasks
+Saturday & Sunday - Complete notes preperation and Devops interview questions on topics covered 
+Monday to Friday - daily tasks and hands-on, with revisiting recorded lectures and study
 
 
