@@ -72,3 +72,61 @@ Assign users:
 <img width="1366" height="174" alt="image" src="https://github.com/user-attachments/assets/d03a5d4a-014e-4b02-8ca1-fe7e63687cf9" />
 
 ---
+### Task 4: Shared Directory 
+
+1. Create directory: `/opt/dev-project`
+2. Set group owner to `developers`
+<img width="746" height="237" alt="image" src="https://github.com/user-attachments/assets/f0eaf093-e5b1-4da5-96c6-4450494d7db6" />
+
+3. Set permissions to `775` (rwxrwxr-x)
+<img width="937" height="296" alt="image" src="https://github.com/user-attachments/assets/df7afce4-98e1-46d1-8a8b-56daa97ef674" />
+
+4. Test by creating files as `tokyo` and `berlin`
+created 
+
+**Verify:** Check permissions and test file creation
+
+Users toyko and berlin both belong to developers group therefore both users have read, write and execution access to dev-project directory but user professor belongs to other group therefore can only access to read and execute.
+<img width="954" height="221" alt="image" src="https://github.com/user-attachments/assets/654fc751-ab55-408a-97c2-a75838e5782a" />
+
+Now logged in as tokyo user and created file named tokyo_files.sh which has defalut permission i.e read and write permissions for the owner and group, and read-only for others. 
+
+<img width="700" height="154" alt="image" src="https://github.com/user-attachments/assets/1bd223cb-45b5-4a1e-8e24-54fb7846d238" />
+
+Changed permission of this file to read,write and execute for owner, read and execute for group and read-only for other user.
+
+<img width="1029" height="120" alt="image" src="https://github.com/user-attachments/assets/d1677849-4fef-4cb5-a51e-41d38906a837" />
+
+Now logged in as berlin and can check accesses
+
+read access - Yes
+
+<img width="1257" height="272" alt="image" src="https://github.com/user-attachments/assets/06a095b7-e67d-4fac-a289-8d3928d4179c" />
+
+write access - No
+
+<img width="1361" height="718" alt="image" src="https://github.com/user-attachments/assets/2ef2eda6-0662-4cc6-b8f9-39402e0903bd" />
+
+Execution access - No
+
+<img width="576" height="47" alt="image" src="https://github.com/user-attachments/assets/1433c5aa-b50f-4990-a328-073c74726615" />
+
+In order to provide required access to other users, need to change file permission to required aceess and can change group of this file accordingly for required users if required.
+
+---
+
+### Task 5: Team Workspace 
+
+1. Create user `nairobi` with home directory
+2. Create group `project-team`
+3. Add `nairobi` and `tokyo` to `project-team`
+4. Create `/opt/team-workspace` directory
+5. Set group to `project-team`, permissions to `775`
+6. Test by creating file as `nairobi`
+
+<img width="1365" height="206" alt="image" src="https://github.com/user-attachments/assets/5cf8b0ea-2cbd-4a44-acd4-fbcc20d09aa2" />
+<img width="1362" height="74" alt="image" src="https://github.com/user-attachments/assets/809c09ee-1ca1-4f78-a2ef-59dbf3a7c659" />
+<img width="1340" height="623" alt="image" src="https://github.com/user-attachments/assets/5d7f45e7-7fa3-4321-9adb-2ed3edab90af" />
+
+
+---
