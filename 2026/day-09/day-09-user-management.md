@@ -127,6 +127,68 @@ In order to provide required access to other users, need to change file permissi
 <img width="1365" height="206" alt="image" src="https://github.com/user-attachments/assets/5cf8b0ea-2cbd-4a44-acd4-fbcc20d09aa2" />
 <img width="1362" height="74" alt="image" src="https://github.com/user-attachments/assets/809c09ee-1ca1-4f78-a2ef-59dbf3a7c659" />
 <img width="1340" height="623" alt="image" src="https://github.com/user-attachments/assets/5d7f45e7-7fa3-4321-9adb-2ed3edab90af" />
+<img width="1096" height="196" alt="image" src="https://github.com/user-attachments/assets/25367293-f988-4d41-85c2-1e40e620f17c" />
 
+checking permissions of this file 
+<img width="1038" height="89" alt="image" src="https://github.com/user-attachments/assets/765d84f5-ff63-41d6-be28-5f9633d61056" />
+<img width="1038" height="89" alt="image" src="https://github.com/user-attachments/assets/d3d5e8fc-c451-4f68-a544-bed9b855999f" />
 
 ---
+
+## Commands Used
+
+### User Management
+```bash
+sudo useradd -m tokyo
+sudo useradd -m berlin
+sudo useradd -m professor
+sudo useradd -m nairobi
+sudo passwd <username>
+```
+---
+
+### Group Management
+```bash
+sudo groupadd developers
+sudo groupadd admins
+sudo groupadd project-team
+```
+---
+
+### Assign Users to Groups
+```bash
+sudo usermod -aG developers tokyo
+sudo usermod -aG developers,admins berlin
+sudo usermod -aG admins professor
+sudo gpasswd -M nairobi,tokyo project-team
+```
+---
+
+### Directory & Permissions
+```bash
+sudo mkdir dev-project
+sudo chgrp developers dev-project/
+sudo chmod 775 dev-project
+
+sudo mkdir /opt/team-workspace
+sudo chown :project-team team-workspace
+sudo chmod 775 team-workspace
+```
+---
+
+### Testing and verification
+```bash
+sudo -u tokyo touch /opt/dev-project/tokyo-test
+sudo -u berlin touch /opt/dev-project/berlin-test
+sudo -u nairobi touch /opt/team-workspace/nairobi-test
+ls -ld /opt/team-workspace/nairobi_files.txt
+```
+<img width="1193" height="259" alt="image" src="https://github.com/user-attachments/assets/b0163b21-7b11-4c94-b69f-2396aa64f11e" />
+
+---
+
+## What I Learned
+1. Users do not get permissions directly, groups control access
+2. The `-aG` flag is critical to avoid removing existing group memberships
+3. Correct group ownership and permissions enable secure collaboration
+4. `sudo -u` is a safe way to test user access without switching sessions
